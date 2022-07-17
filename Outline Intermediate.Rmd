@@ -1,0 +1,224 @@
+---
+title: "Outline"
+author: "Rajesh Lakhan"
+date: '2022-07-16'
+output: pdf_document
+---
+---
+title: "The University of the West Indies, St. Augustine Campus Intermediate R course August 2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!---
+Login Details:
+
+Daily: https://uwi.zoom.us/meeting/tJwtd-GvrTkiHNKUD1Z9gapEwiET_QPDKek5/ics?icsToken=98tyKuCgrjsiHdeXuB-BRow-AoigWe3ztnpHgo12qTu0OXlUYxPTIetnBo1OIPz7
+
+Join Zoom Meeting
+https://uwi.zoom.us/j/98008732866?pwd=aENGaGEwTFVwaEJSNEVjMlM1d3ZhUT09
+
+Meeting ID: 980 0873 2866
+Passcode: 847246
+
+-->
+
+
+
+### Level: Intermediate
+
+### Course Duration: 14 contact hours 
+      Monday 18 July - Sunday 24 July.
+      Time 5:00pm - 7:00pm
+      
+
+### Prerequisites: R Beginner's Course. 
+                  AND/OR
+                  On the job statistical experience/some prior statistical knowledge.
+### Facilitator: Rajesh Lakhan 
+
+### Email: rajeshlakhan08@gmail.com  
+
+
+
+## Course Description
+R is a freely available statistical package that has grown in popularity. This course exposes students who are familiar
+with R the tools to carry of some of the more common inferential statistical procedures. The tenets of hypothesis
+testing as well as correlation and simple linear regression are covered. The course is easily accessible to those
+without a strong mathematical or statistical background.
+
+## Content
+
+We will cover the following topics:
+
+
+- Estimation Procedures
+- Hypothesis Testing
+- Correlation
+- Analysis of Variance
+- Simple Linear Regression
+
+
+## Learning Objectives
+At the end of this course, you will be able to:
+
+- Choose an appropriate technique based on the research question and data collected by the researcher.
+- Interpret the output from R for some advanced statistical methods available in R.
+ 
+
+
+
+
+
+\newpage 
+### Detailed Course Content
+This short course is organized into 8 sessions:
+
+
+#### Session 1
+- Overview of Course
+- Introduction into R
+  * Installing Packages
+  - Reading/Importing Data
+  - Simple commands
+- Data Manipulation
+  - Ordering and Sorting Data
+  - Tabulating data
+  - Simple graphs (histograms and pie charts)
+  - Data Exercise
+
+
+
+### Session 2
+- Estimation of Probability distributions
+  - Binomial distribution
+  - Poisson distribution
+  - Exercises
+- Covariance and correlation
+  - Interpretation of covariance and correlathion
+  - Correlation scatterplot
+  - Exercises
+- Hypothesis Testing (Theory)
+  - Introduction to hypothesis testing
+  - Formulating hypotheses 
+  - Testing hypotheses
+
+
+### Session 3
+- Review of hypothesis testing theory
+  - Test Statistic
+  - Critical Value
+  - P-value
+  - Confidence interval
+- Hypothesis Testing using T-distribution
+  - One-sample t-test
+  - Two-sample t-test
+     - Independent samples
+     - Paired or dependent samples
+  - Exercises
+
+### Session 4
+- Normal Distribution
+  - Standard Normal
+- Hypothesis Testing using Normal-distribution
+  - One-sample proportion test
+  - Two-sample proportion test
+  - Yates continuity correction
+  - Exercises
+- In-class exercises
+  - To be enjoyed (attempted) by students
+
+
+
+### Session 5
+- Independence Test
+  - Chi-Squared distribution
+  - One-way analysis
+  - Two-way analysis
+  - Exercises
+- Correlation Tests
+  - Pearson's correlation test
+    - Shapiro-Wilk normality test
+  - Spearman's correlation test
+  - Exercises
+
+ 
+### Session 6
+- Hypothesis Testing (3 or more samples)
+  - Analysis of Variance [ANOVA] (parametric)
+  - Kruskal Wallis (non-parametric)
+  - Exercises
+  - Two-way analysis
+  - Exercises
+- Comparison of means
+  - Tukey's comparison test
+  - Exercises
+
+### Session 7
+- Completely randomized block design
+  - Blocking
+  - ANOVA table
+  - Tukey's comparison test
+  - Exercises
+- Simple Linear Regression
+  - Simple linear regression model
+  -Significance of regression model
+    - T-test and coeffiient confidence intervals
+    - ANOVA table and F-test
+  - Plotting linear regression model
+  - Exercises
+
+### Session 8
+- Simple Linear Regression continued
+  - Assumptions of residuals
+    - Normality, constant variance and independence
+  - Exercises
+- In-class exercises
+  - To be enjoyed (attempted) by students
+  
+\newpage
+
+### Intended Audience
+This course is suitable for students, researchers, working professionals and other interested persons who have previously used R and want to expand their knowledge of statistical procedures within R software.
+
+
+### Course Delivery Mode
+- Interactive Zoom Sessions. Participants are expected to follow along in the session with their personal device.
+- Presentations, code and practical exercises posted on website:  
+  "https://github.com/4Rajesh4/R-intermediate-July-2022-Rajesh-Lakhan"
+
+ 
+ 
+### Software 
+- R (and RStudio) is the software we will be using for this course. 
+- R is free to download for Windows, MAC and Linux operationg systems at: https://cran.r-project.org/  [hyperlink]
+
+
+### Certification
+A certification of Participation is awarded upon completion of the course, minimum attendance required.
+
+
+### Resources
+- R Installation Website: https://cran.r-project.org/ 
+- https://www.iiap.res.in//astrostat/tuts/intro2.html [hyperlink]
+- https://www.rstudio.com/collections/rstudio-essentials/ [hyperlink]
+- https://rmarkdown.rstudio.com/lesson-1.html [hyperlink]
+
+#### End
+
+
+
+
+
+
+
+
+
+
+
+
