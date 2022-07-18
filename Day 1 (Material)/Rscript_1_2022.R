@@ -81,7 +81,7 @@ women
 dim(women)
 str(women)
 ?women
-attach(women)
+attach(women) # Attach Set of R Objects to Search Path
 height
 women$height
 women[ , 1]
@@ -116,16 +116,17 @@ library(data.table)
 women = as.data.table(women) ## so you can call the columns, this is redundant for this data set though
 
 which(height == 59) ## which gives the index
-women[which(height == 59)]  ### this gives the actual values
+women[which(height == 59)]  ### this gives the actual values, any other method to do this?
 women[which(weight > 150)]
 women[which(weight < 120)]
+women[2]
 
 
 diet = read.csv("Diet.csv", header = T)
 diet
 
-## diet2 = read.csv("Diet.csv", header = F)
-## diet2
+# diet2 = read.csv("Diet.csv", header = F)
+# diet2
 
 attach(diet)
 dim(diet)

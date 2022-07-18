@@ -27,6 +27,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- Material on R markdown: https://rmarkdown.rstudio.com/authoring_basics.html -->
 
+<!-- Google Style File:
+   https://rstudio-pubs-static.s3.amazonaws.com/149679_0f07bbb45e5c4f3887d64c0152e0b747.html -->
+
 
 ## Level: Intermediate
 
