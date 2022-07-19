@@ -27,7 +27,7 @@ table1
 table2 = cbind(row_1, row_2)			#cbind = combine by columns
 table2
 
-colnames(table1) = c(A, "B", "C", "D", "E")
+colnames(table1) = c("A", "B", "C", "D", "E")
 table1
 
 rownames(table2) = c("A", "B", "C", "D", "E")
@@ -49,21 +49,17 @@ table3
 ########
 
 #Change Directory before reading data
-Data4 = read.csv("Diet.csv", header = T)
-Data4
-
-
-
 data1=read.table("Butterfat.txt",header=T)
 data1
 
 data2 <- read.csv("Diet.csv",header = F)
 data2
 
-data2.5 <- read.csv("Diet.csv",header = T)
-data2.5
-
-
+# data2.5 <- read.csv("Diet.csv",header = T)
+# data2.5
+# 
+# Data4 = read.csv("Diet.csv", header = T)
+# Data4
 
 install.packages("readxl")
 library(readxl)
@@ -86,7 +82,7 @@ height
 women$height
 women[ , 1]
 
-women[1:5,]
+women[1:5, ]
 women[8,2]
 
 mean(height)
@@ -94,10 +90,12 @@ var(height)
 sd(height)
 sqrt(var(height))
 
+standard_Error = sd(height)/sqrt(length(women$height))
+standard_Error
 ### What does this do:  var(women$height)
 
 
-hist(weight,main = "Histogram Showing Women's weight", col = "lightblue")
+hist(weight, main = "Histogram Showing Women's weight", col = "lightblue")
 #Can label the axis of a histogram using xlab = "label", ylab = "label" 
 
 max(height)
@@ -106,7 +104,8 @@ median(height)
 
 weight
 order(weight) #gives the positions of the values in the data, NOT the actual data 
-weight[order(weight)] ## This will give the actual values in the particular order ###A <- mtcars[order(mtcars$cyl),] ###
+weight[order(weight)]
+# New: weight[c(9:11)] ## This will give the actual values in the particular order ###A <- mtcars[order(mtcars$cyl),] ###
 sort(weight, decreasing=T)  ### double check
 sort(weight, decreasing=F)
 
@@ -117,7 +116,9 @@ women = as.data.table(women) ## so you can call the columns, this is redundant f
 
 which(height == 59) ## which gives the index
 women[which(height == 59)]  ### this gives the actual values, any other method to do this?
+# which(weight > 150)
 women[which(weight > 150)]
+
 women[which(weight < 120)]
 women[2]
 
