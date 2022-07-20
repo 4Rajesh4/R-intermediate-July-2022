@@ -123,6 +123,10 @@ women[which(weight < 120)]
 women[2]
 
 
+
+
+##### final example for the class
+
 diet = read.csv("Diet.csv", header = T)
 diet
 

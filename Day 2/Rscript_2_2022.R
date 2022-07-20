@@ -10,6 +10,7 @@ X ~ Bin(125,0.04)
 pop.mean = 125 * 0.04
 pop.mean
 pop.var = 125 * 0.04 * (1-0.04)
+pop.var
 
 
 set.seed(25) ### keeps the data fixed, reproducibility ####
@@ -28,6 +29,7 @@ pbinom(1,125,0.04,lower.tail=TRUE,log.p=F) ## cummulative probability distributi
 
 set.seed(12)
 y=rpois(10000,5)
+y
 mean(y)
 dpois(2, 5, log=F)
 ppois(2, 5, lower.tail=T, log.p=F)
@@ -48,7 +50,7 @@ hist(y, main="Histogram of Poisson(5)", col="lightblue")
 ## when you pull a heart.
 
 ## Independent Events: The occurrence of one does not affect the occurrence of the other
-cov(x,y)
+cov(x,y) # pg 10 in slides
 cor(x,y)
 
 x = c(106,125,42,51,64,76,72,84,40,171,180,210,101,41,70)
@@ -60,7 +62,7 @@ pairs(y~x)							#scatter plot matrix
 
 ############ Hypothesis Testing - One sample ############
 
-#Example 1
+#Example 1, page 16 in slides. Do not scroll down in slides
 weight = c(68, 63, 66, 81, 61, 73, 65, 77)
 t.test(weight, mu=60, alternative="greater", conf.level=0.90)  
 qt(0.10,df=7,lower.tail=F,log.p=F)  ## qt gives t, such that P(T>=t) = alpha 
