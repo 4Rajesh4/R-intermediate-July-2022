@@ -1,7 +1,9 @@
 ---
 title: "The"
 author: "Rajesh Lakhan"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ---
@@ -16,21 +18,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 <!-- Join Zoom Meeting -->
-
 <!-- https://sta-uwi-edu.zoom.us/j/92507216345?pwd=Y09KYXM5UlBxQ1FFSVhDNnFXbjQrQT09 -->
-
 <!-- Meeting ID: 925 0721 6345 -->
-
 <!-- Passcode: 677407 -->
 
 <!-- R Studio Cheat Sheets: https://www.rstudio.com/resources/cheatsheets/ -->
 
 <!-- Material on R markdown: https://rmarkdown.rstudio.com/authoring_basics.html -->
 
+<!-- Free Videos -->
+<!-- https://www.rstudio.com/collections/rstudio-essentials/ -->
+
 <!-- Google Style File:
    https://rstudio-pubs-static.s3.amazonaws.com/149679_0f07bbb45e5c4f3887d64c0152e0b747.html -->
 
-# Level Trial
+
+<!-- # Extra: https://code.visualstudio.com/ for editing code  -->
+
 ## Level: Intermediate
 
 ## Course Duration: 14 contact hours
