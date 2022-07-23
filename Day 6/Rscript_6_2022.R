@@ -23,7 +23,7 @@ year
 anova=aov(price~year)
 ## anova=aov(price~year,conf.level = 0.90) ## there is no CL for ANOVA, because of the F distribution and what the test is calculating, the ratio of MSgroup/MSreplicate
 anova
-summary(anova)
+summary(anova) ## Demonstrate the use of the asteris ***, so you do not have to think
 qf(0.99,2,12) ##q gives the value on the x axis
 ### 
 
@@ -33,7 +33,7 @@ qf(0.99,2,12) ##q gives the value on the x axis
 persons=c(16,20,18,20,21,25,17,15,19,3,5,10)
 religion=c(rep("h",3),rep("c",3),rep("m",3),rep("o",3))	
 anova=aov(persons~religion)
-summary(anova)							
+summary(anova)		## Demonstrate the use of the asteris ***, so you do not have to think					
 qf(0.95,3,8)
 
 
@@ -41,22 +41,24 @@ TukeyHSD(anova, conf.level=0.95)  ### Honest Significant Difference
 
 
 
-############ Kruskal Wallis ###########
+############ Kruskal Wallis (Non-parametric ANOVA) ###########
 
 ##Example 1
 chickwts
 attach(chickwts)
-kruskal.test(weight~feed, conf.level=0.95)
+kruskal.test(weight~feed, conf.level=0.90)
 kruskal.test(weight~feed)
 qchisq(0.90, df=5)
 
-### to find where the difference is...
 TukeyHSD(aov(weight~feed), conf.level=0.90)
+### to find where the difference is... See question 1, exercise on 
+# day 3, aggregate funtion...
+
 
 ##Example 2
 
 #Option 1: Manually
-### shapiro.test(c(59,60,59,55,50))
+# shapiro.test(c(59,60,59,55,50))
 
 
 ## Data must line up under each other. 
@@ -71,6 +73,7 @@ qchisq(0.99, df=3)
 #Option 2: Data file
 icu = read.csv("ICU_patients.csv", header=T)
 attach(icu)
+icu
 kruskal.test(hours~hospital)
 qchisq(0.99, df=3)
 
@@ -93,3 +96,20 @@ location <- as.factor(location)
 TukeyHSD(aov(cost~location), conf.level=0.90) ## The code will run now
 
 ######################### END #########################
+
+
+
+# 
+# Hm = chickwts[1:10, 1]
+# Hm
+# horsmean = mean(chickwts[1:10,1])
+# horsmean
+# feed
+# 
+# chickwts = as.data.table(chickwts)
+# linseed = which(chickwts$feed =="linseed")
+# linseed
+# linseed2 = chickwts[linseed]
+# linseed2
+# linseed2mean = mean(linseed2[,1])
+# str(linseed2)

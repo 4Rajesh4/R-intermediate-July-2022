@@ -28,6 +28,9 @@ summary(crbd)
 qf(0.95,4,8)
 
 
+# There is a treatment value for each block, this will minimize the blocking effect
+
+
 ##Example 2
 table = matrix(c(709,713,660,668,722,692,659,666,678,698,704,686),
 	nrow=4, ncol=3, byrow=TRUE)

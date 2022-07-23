@@ -2,14 +2,19 @@
 
 
 #Example 1
-
-## Note NOT 90 with the 200.
+## Note NOT 90 with the 200, when inputting the data into R.
+## It is the successes in one variable and the number of elements in the other
+## variable. 
 
 prop.test(x=c(90,125), n=c(200,275), p=NULL,
 	alternative="two.sided", conf.level=0.97, correct=T)
 
+
+
 #Example 2
 attach(mtcars)
+mtcars
+str(mtcars)
 library(data.table)
 x1 = which(gear == 4)
 length(x1)
@@ -27,8 +32,8 @@ prop.test(x = c(12,5), n=c(32,32), p = NULL,
 ############################    #Question 1   ##########################
 ### Question 1 (longest method)
 # Method 1
-
 iris
+str(iris)
 attach(iris)
 library(data.table)
 iris = as.data.table(iris)
@@ -50,10 +55,11 @@ table
 
 
 
+
+
+
 ### Alternative Using sapply (middle) ####
 # Method 2
-
-
 iris
 attach(iris)
 library(data.table)
@@ -78,8 +84,9 @@ aggdata
 ## list groups the data by the factor that is in the list
 ## parameter for which you want to group the data by. 
 ### Alternative is tapply ##
-# Method 4
 
+
+# Method 4
 T1 <- tapply(iris$Sepal.Length, iris$Species, FUN = mean)
 T2 <- tapply(iris$Sepal.Width, iris$Species, FUN = mean)
 T3 <- tapply(iris$Petal.Length, iris$Species, FUN = mean)
@@ -107,7 +114,7 @@ dpois(4,2,log=F) #d is for exactly equal in discrete
 
 set.seed(8)
 x=rbinom(50000,2000,0.001)
-set.seed(8)
+# set.seed(8) 
 y=rpois(50000,2)
 par(mfrow=c(1,2)) #opens a plot window, row by column
 hist(x, main="Binomial(2000,0.001)")		
@@ -120,8 +127,12 @@ Scatterplot <- plot(x,y)
 # Little to no relationship and relationship between X and Y
 
 
-
-
+z=rbinom(50000,2000,0.001)
+Cov <- cov(x,z)
+Cov
+Cor <- cor(x,z)
+Cor
+Scatterplot <- plot(x,z)
 
 
 
@@ -156,8 +167,8 @@ diff=m1-m2
 diff
 dbar=mean(diff)
 dbar
-#H0: mu_D >= 0 vs H1: mu_D < 0
-t.test(m1,m2,alternative="less",conf.level=0.90,paired=T)
+#H0: mu_D <= 0 vs H1: mu_D > 0
+t.test(m1,m2,alternative="greater",conf.level=0.90,paired=T)
 qt(0.10,df=11,lower.tail=T,log.p=F)
 
 #mean difference = dbar = -0.06

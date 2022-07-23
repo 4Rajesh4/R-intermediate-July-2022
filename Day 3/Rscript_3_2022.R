@@ -33,23 +33,19 @@ sleep
 attach(sleep)
 drug1 = sleep[1:10,1] # if data
 drug1
-
-
-a = which(group ==1)
-a
-length(a)
-
-sleep[c(a)]
-drug111 = sleep[which(group == 1),]
-drug111
-
-
-sleep[c(1:9),]
-
 drug2 = sleep[11:20,1]
 drug2
 t.test(drug1, drug2, alternative="two.sided", conf.level=0.90, var.equal=F)
 qt(0.05,df=18,lower.tail=F,log.p=F)
+
+# a = which(group ==1)
+# a
+# length(a)
+# sleep[c(a)]
+# drug111 = sleep[which(group == 1),]
+# drug111
+# sleep[c(1:9),]
+
 
 
 

@@ -9,16 +9,22 @@ library(MASS)
 ## Goodness of fit with the uniform distribution
 ##
 conc = c(11, 26, 45, 68)
+conc
 chisq.test(conc)
 qchisq(0.90, df=3) # chi-squared critical vale 
 
+
+
 ##One-way example 2
+mtcars
 carb = table(mtcars$carb) ### Table is used to get the frequency of categories in one column
 carb
 chisq.test(carb)
 qchisq(0.98, df=5)
-
-
+# Another method?
+X = c(7,10,3,10,1,1)
+X
+chisq.test(X)
 ##Two-way example 1
 
 ## Test for independence between Categorical Variables
@@ -51,7 +57,7 @@ table1
 library(readxl)
 data = read_excel("Exercise.xlsx")
 data
-new.table = data[,2:4]
+new.table = data[ ,2:4]
 new.table
 chisq.test(new.table)	
 qchisq(0.95, df=2)
@@ -63,10 +69,14 @@ data2
 
 ## A <- table(data2$treatment, data2$improvement)
 ## chisq.test(A, correct=FALSE)
-
-
 chisq.test(data2$treatment, data2$improvement, correct=FALSE)
+chisq.test(data2$improvement, data2$treatment, correct=FALSE)
+# instead of $, 
+# order of the data matters?
+
 qchisq(0.99, df=1)
+
+
 ### At the 10% we reject
 ## At the 5% S.L we reject
 ## At the 1% we Do not reject
@@ -85,15 +95,36 @@ chisq.test(table, correct=F) ## Fisher exact test ###
 ##Example 1
 
 malaria = read.csv("malaria.csv", header=T)
+malaria
 library(data.table)
 data = as.data.table(malaria)
+data
 exposed = data[which(data$malaria == 1)]
 attach(exposed)
 
 shapiro.test(age)
 shapiro.test(antibody)
 cor.test(age, antibody, method = "spearman", exact=F)
-cor.test(age, antibody, method = "spearman")
+cor.test(age, antibody, method = "spearman", exact=T)
+
+## Give time for them to try Example 2 by themselves
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ##Example 2
@@ -101,9 +132,6 @@ swiss
 shapiro.test(swiss$Fertility)
 shapiro.test(swiss$Agriculture)
 cor.test(swiss$Fertility, swiss$Agriculture, conf.level=0.90, method="pearson")
-
-
-
 ######################### END #########################
 
 
