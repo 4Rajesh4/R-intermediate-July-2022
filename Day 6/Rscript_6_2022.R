@@ -39,6 +39,10 @@ qf(0.95,3,8)
 
 TukeyHSD(anova, conf.level=0.95)  ### Honest Significant Difference
 
+## Fisher's Least Significant Difference (LSD) Test is another post-hoc test one you
+## perform. Self Study. You can read up on "Bonferroni post-hoc test also",
+## https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/post-hoc/ 
+
 
 
 ############ Kruskal Wallis (Non-parametric ANOVA) ###########
@@ -99,13 +103,12 @@ TukeyHSD(aov(cost~location), conf.level=0.90) ## The code will run now
 
 
 
-# 
 # Hm = chickwts[1:10, 1]
 # Hm
 # horsmean = mean(chickwts[1:10,1])
 # horsmean
 # feed
-# 
+
 # chickwts = as.data.table(chickwts)
 # linseed = which(chickwts$feed =="linseed")
 # linseed

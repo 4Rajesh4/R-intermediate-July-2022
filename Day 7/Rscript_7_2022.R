@@ -35,7 +35,7 @@ qf(0.95,4,8)
 table = matrix(c(709,713,660,668,722,692,659,666,678,698,704,686),
 	nrow=4, ncol=3, byrow=TRUE)
 data = c(table)
-data
+data # within each block (Writing Surface, you have each treatment)
 T = c("BP1", "BP2", "BP3", "BP4")
 a = 4
 b = 3
@@ -103,7 +103,8 @@ plot(x,y,xlim=c(0,9),ylim=c(4.8,8.0),xlab="Day",ylab="pH",
 	main="Relationship between milk pH and day")
 abline(reg,col="black")
 
-windows()
+#X11() #windows() # manually adjust the window, if there an a margin error!
+X11(width=10, height=10)
 split.screen(c(2,2))
 screen(1)
 hist(reg$residuals, main = "Histogram of Residuals")
@@ -135,7 +136,7 @@ qt(0.025,60,lower.tail=F,log.p=F)
 
 
 ## Extra, follow example above
-windows()
+X11(width=10, height=10) #windows()
 split.screen(c(2,2))
 screen(1)
 hist(reg$residuals, main = "Histogram of Residuals")
