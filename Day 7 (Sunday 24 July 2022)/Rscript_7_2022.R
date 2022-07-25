@@ -8,7 +8,7 @@
 table = matrix(c(7.62,8.14,7.76,7.17,7.46,8.00,8.15,7.73,7.57,7.68,7.93,
 	7.87,7.74,7.80,7.21), nrow=3, ncol=5, byrow=TRUE)
 table
-data = c(t(table)) 
+data = c(t(table)) # we transpose to get the data in the form that R requires
 data
 T = c("36", "54", "72", "108", "144")
 a = 5  ## a is the number of Treatment groups
@@ -103,8 +103,10 @@ plot(x,y,xlim=c(0,9),ylim=c(4.8,8.0),xlab="Day",ylab="pH",
 	main="Relationship between milk pH and day")
 abline(reg,col="black")
 
-#X11() #windows() # manually adjust the window, if there an a margin error!
-X11(width=10, height=10)
+
+# X11(width=10, height=10)
+# X11() Use this command in UBUNTU instead of the windosw() command
+windows() # You can resize the window manually if you get a margin error in the following code.
 split.screen(c(2,2))
 screen(1)
 hist(reg$residuals, main = "Histogram of Residuals")

@@ -129,7 +129,8 @@ summary(anova.reg)
 ##iv
 ### Diagnostic Test (perform test first then do the analysis)
 
-windows()
+# X11() Use this command in UBUNTU instead of the windosw() command
+windows() # You can resize the window if you get a margin error in the following code.
 split.screen(c(2,2))
 screen(1)
 hist(reg$residuals, main = "Histogram of Residuals")

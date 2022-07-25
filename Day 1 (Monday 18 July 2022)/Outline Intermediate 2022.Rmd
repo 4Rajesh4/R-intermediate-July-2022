@@ -17,10 +17,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<!-- Join Zoom Meeting -->
-<!-- https://sta-uwi-edu.zoom.us/j/92507216345?pwd=Y09KYXM5UlBxQ1FFSVhDNnFXbjQrQT09 -->
-<!-- Meeting ID: 925 0721 6345 -->
-<!-- Passcode: 677407 -->
+<!-- Video on the beauty of Statistics: https://www.youtube.com/watch?v=hftuQXPqfRA&t=2191s -->
 
 <!-- R Studio Cheat Sheets: https://www.rstudio.com/resources/cheatsheets/ -->
 
